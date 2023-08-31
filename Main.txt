@@ -1,0 +1,128 @@
+#main
+import random
+
+#use import time WITH time.sleep(5) to pause the sytem for 5 seconds before continuing on
+#########################################################################
+'''from IPython.display import clear_output
+import time
+
+print ('Testing waiting? (FIVE SECONDS!)')
+time.sleep(4)
+clear_output(wait=False)
+'''
+#########################################################################
+starter = True
+game_on = True
+print ('Welcome to Tic Tac Toe')
+print ('     by Duc Mai')
+player1_name = input ('What is your name Player 1? ')
+player2_name = input ('What is your name Player 2? ')
+line3 = [' ', ' ', ' ']
+line2 = [' ', ' ', ' ']
+line1 = [' ', ' ', ' ']
+while game_on:
+    #line3 = [' ', ' ', ' ']
+    #line2 = [' ', ' ', ' ']
+    #line1 = [' ', ' ', ' ']
+    
+    if starter:
+        random_num_holder = random_num_funtion()
+        commencement_func_holder = commencement()
+        if commencement_func_holder == 'Y':
+            line3 = [' ', ' ', ' ']
+            line2 = [' ', ' ', ' ']
+            line1 = [' ', ' ', ' ']
+            person_TO_start = guess_winner(random_num_holder)
+            print (f'The winner is {person_TO_start} and will go first.')
+            if person_TO_start == 'Player1':
+                print (f'Congrats {player1_name} you will go first, Good Luck :)')
+            else:
+                print (f'Congrats {player2_name} you will go first, Good Luck :)')
+            #print (person_TO_start)
+    elif commencement_func_holder == 'N':
+        print ('The game has ended')
+        #break
+        #starter = False
+        #game_on = False
+    starter = False
+    #game_on = False
+    #print (f'This is the value of person_TO_start variable at the end of the while loop::: {person_TO_start}')
+    #print (ducprint)
+    #print ('I am running after the END OF LOOP!!    8/28/2023')
+    print ('''    
+    ''')
+    if commencement_func_holder == 'N':
+        break
+    displayboard_template()
+    #print (f'This is the value of commencement_func_holder: {commencement_func_holder}')
+    ##################################################################################
+    #Everything above this works
+    ##################################################################################
+    
+    
+    #################
+    #EXPERIMENT with index function and run it in while loop with while loop condition set to winner check
+    
+    
+    winnerwinnerchickendinner = None
+    
+    if person_TO_start == 'Player1':
+        while winnerwinnerchickendinner == None:
+            player1_position_func()
+            current_board()
+            winnerwinnerchickendinner = winner_check()
+            if winnerwinnerchickendinner != None:
+                print (winnerwinnerchickendinner)
+                break
+                
+            player2_position_func()
+            current_board()    
+            winnerwinnerchickendinner = winner_check()
+            if winnerwinnerchickendinner != None:
+                print (winnerwinnerchickendinner)
+                break
+                
+                
+    else:
+        while winnerwinnerchickendinner == None:
+            player2_position_func()
+            current_board()
+            winnerwinnerchickendinner = winner_check()
+            if winnerwinnerchickendinner != None:
+                print (winnerwinnerchickendinner)
+                break
+                
+            player1_position_func()
+            current_board()    
+            winnerwinnerchickendinner = winner_check()
+            if winnerwinnerchickendinner != None:
+                print (winnerwinnerchickendinner)
+                break
+    
+    gamebreak = None
+    
+    while gamebreak != 'Y' or gamebreak != 'Y':
+        gamebreak = input ('Do you want to try again? Type Y or N').upper()
+        
+        if gamebreak =='Y':
+            game_on = True
+            #change behavior with this starter variable value
+            starter = True
+        else:
+            game_on = False
+            break
+        
+    
+        
+    
+    '''
+    display board
+    ask winning player to pick a postion on the board
+    check for winner
+    if no winner ask next person to 
+    while winnerwinnerchickendinner == none
+    continue through while loop
+    if chek for winner equal to winner set winnerwinnerchickendiner equal to playername
+    
+    
+    '''
