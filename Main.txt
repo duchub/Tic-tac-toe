@@ -101,7 +101,7 @@ while game_on:
     
     gamebreak = None
     
-    while gamebreak != 'Y' or gamebreak != 'Y':
+    while gamebreak != 'Y' or gamebreak != 'N':
         gamebreak = input ('Do you want to try again? Type Y or N').upper()
         
         if gamebreak =='Y':
