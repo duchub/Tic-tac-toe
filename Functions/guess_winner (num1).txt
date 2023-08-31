@@ -1,0 +1,17 @@
+def guess_winner (num1):
+    
+    player1_num_guess = int (input ('Player 1, Pick a number between 0 and 100\n'))
+    player2_num_guess = int (input ('Player 2, Pick a number between 0 and 100\n'))
+    
+    player1_guess_value = abs (player1_num_guess - num1)
+    player2_guess_value = abs (player2_num_guess - num1)
+    
+    if player1_guess_value > player2_guess_value:
+        print (f'The random number was {num1}')
+        return 'Player2'
+    else:
+        print (f'The random number was {num1}')
+        return 'Player1'
+    
+    
+    

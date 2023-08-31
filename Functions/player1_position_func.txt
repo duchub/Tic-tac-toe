@@ -1,0 +1,31 @@
+#remodel
+def player1_position_func():
+    player1_position = input('Player 1 Please choose a position on the board: ')
+    if player1_position.isdigit():
+        player1_position = int(player1_position)
+        #print(type(player1_position))
+    if player1_position in list(range(0,4)):
+        player1_position -= 1
+        if line1[player1_position] == ' ':
+            player1_letter = 'X'
+            line1[player1_position] = player1_letter
+        else:
+            print ('Invalid input for bottom row')
+    
+    elif player1_position in list(range(4,7)):
+        player1_position -= 4
+        if line2[player1_position] == ' ':
+            player1_letter = 'X'
+            line2[player1_position] = player1_letter
+            #player1_turn = False
+        else:
+            print ('Invalid input for middle row')
+            
+    elif player1_position in list(range(7,10)):
+        player1_position -= 7
+        if line3[player1_position] == ' ':
+            player1_letter = 'X'
+            line3[player1_position] = player1_letter
+            #player1_turn = False
+        else:
+            print ('Invalid input for top row')

@@ -1,0 +1,24 @@
+#finished. works
+def commencement():
+    choice = input ('Are you to start a new game? (Type Y for yes and N for no)').upper()
+    if choice == 'Y':
+        print (choice)
+        return choice    
+    elif choice == 'N':
+        print (choice)
+        print ('I hit NO!!!!!')
+        return choice
+            
+    while choice != 'Y' or choice != 'N':
+        print ('Hi i am in the while loop :)')
+        choice = input ('Are you to start a new game? (Type Y for yes and N for no)').upper()
+        
+        if choice == 'Y':
+            print (choice)
+            return choice
+        
+        elif choice == 'N':
+            print (choice)
+            print ('I hit NO!!!!!')
+            return choice
+    

@@ -1,0 +1,5 @@
+import random
+
+def random_num_funtion ():
+    random_num = (random.randint(0,100))
+    return random_num    
